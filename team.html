@@ -8,4 +8,38 @@ seo:
   twitter_card:
   keywords:
   hide-from-google: false
+team:
+ - name: Kaspar Fuchs
+   beschreibung: Geschäftsleitung
+   nummer: +4353327225414
+   email: k.fuchs@getraenke-fuchs.at
+   profil_image: /images/kaspar-fuchs.jpg
 ---
+
+<!-- intro banner -->
+<section class="bg-image vh30 center grid">
+  <div class="col-12-middle">
+    <h2>Unser Team</h2>
+    <p>Wir sind ein eingespieltes Team und stets bemüht alles zu Ihrer vollsten Zufriedenheit zu erledigen.</p>
+  </div>
+</section>
+
+<!-- team -->
+<section class="padded">
+  {% for person in page.team %}
+
+    <div class="col-5_sm-12 padded-2"> 
+      <img src="{{person.profil_image}}" alt="{{person.name}}" class="profile-image">
+    </div>
+    <h3>{{person.name}}</h3>
+    <p>{{person.beschreibung}}</p>
+
+    <a href="tel:{{person.nummer}}">
+      <i class="fa-solid fa-phone"></i>
+    </a>
+    <a href="mailto:{{person.email}}">
+      <i class="fa-regular fa-envelope"></i>
+    </a>
+
+  {% endfor %}
+</section>
