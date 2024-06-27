@@ -304,6 +304,7 @@ nav a:hover {
 .vh70  { min-height: 70vh; }
 .vh60  { min-height: 60vh; }
 .vh50  { min-height: 50vh; }
+.vh30  { min-height: 30vh; }
 
 /* Padding Utility Classes */ 
 .padded-sm { padding: 2.5%; }
