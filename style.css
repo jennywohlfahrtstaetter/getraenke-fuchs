@@ -180,7 +180,7 @@ p a:hover {
 
 
 
-/* ------------------ Header & Hamburger Menu ---------------------- */
+/* ------------------ Header ---------------------- */
 header {
     padding: 1rem 5%;
 }
@@ -206,7 +206,6 @@ nav a:hover {
 .dropdown { 
   position: relative; 
   display: inline-block;
-  border: 1px solid orange;
 }
 
 .dropdown-title {
@@ -217,14 +216,13 @@ nav a:hover {
 .dropdown-content {
   position: absolute;
   top: 100%;
-  left: -1rem;
+  left: -0.1rem;
   padding: 0.5rem;
   display:none; 
   background-color: white;
   z-index: 2;
   text-align: left;
   min-width: 10rem;
-  border: 1px solid mediumvioletred;
 }
 
 .dropdown:hover .dropdown-content{ 
@@ -236,6 +234,7 @@ nav a:hover {
   padding: 0.2rem;
 }
 
+/* mobile menu */
 .hamburger-button {
     cursor: pointer;
     padding: 0.5rem;
@@ -281,20 +280,6 @@ nav a:hover {
 /* ------------------------- Contact Forms  --------------------------- */
 
 
-
-/* --------------------- Blogging elements  ---------------------------- */
-
-/* Post Loop Item  */
-
-/* Individual Elements */
-
-/* Individual Blog Post Pages  */
-
-/* Sidebar */
-
-/* Social Share Nav  */
-
-/* Miscelaneous elements  */
 
 
 /* -------------------- Page Name  ------------------------------------- */
