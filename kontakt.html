@@ -16,7 +16,6 @@ seo:
   </div>
 </section>
 
-{% include oeffnungszeiten-banner.html %}
 
 <!-- kontaktmöglichkeiten icon grid -->
 <section class="grid padded">
@@ -40,5 +39,64 @@ seo:
   </div>
 </section>
 
+{% include oeffnungszeiten-banner.html %}
+
 <!-- contact form -->
- 
+<section class="padded">
+  <h2 class="center">Kontakformular</h2>
+<div class="grid">
+  <div class="col-5_sm-12 padded-2">
+    <div class="bg-image portrait" style="background-image: url('/images/empfang.jpg');"></div>
+  </div>
+
+  <!-- form &action missing!#-->
+  <div class="col-7_sm-12 padded">
+
+      <form>
+
+          <label for="_name"> Ihr Name </label>
+          <input class="form2" type="text" name="_name" id="_name" placeholder="Name" />
+        
+          <label for="_replyto"> Ihre E-Mail-Adresse </label>
+          <input class="form2" type="email" name="_replyto" id="_replyto" placeholder="Email" />
+        
+          <label for="message"> Ihre Nachricht </label>
+          <textarea class="form2" name="message" id="message" placeholder="Hey, I want to..."></textarea>
+        
+          <button type="submit">Senden</button>
+          
+        </form>  
+  </div>
+</div>
+</section>
+
+<!-- embed google map responsively  -->
+<section>
+  <h2 class="center padded">Hier finden Sie uns:</h2>
+<style>
+  .google-maps {
+    position: relative;
+    padding-bottom: 35%; // This is the aspect ratio
+    height: 0;
+    overflow: hidden;
+  }
+  .google-maps iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100% !important;
+    height: 100% !important;
+  }
+</style>
+
+<div class="google-maps">
+  <iframe
+    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2696.209398138413!2d12.109087076158456!3d47.48583397117902!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4776338775fcb2e3%3A0x7e80650efd92d00a!2sKaspar%20Fuchs%20GmbH!5e0!3m2!1sen!2sau!4v1719539644133!5m2!1sen!2sau"
+    width="1200"
+    height="450"
+    style="border:0;"
+    allowfullscreen=""
+    loading="lazy"
+  ></iframe>
+</div>
+</section>
