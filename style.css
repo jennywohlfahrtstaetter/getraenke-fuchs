@@ -16,13 +16,12 @@ section { position: relative; }
 
 /* ------------------------ CSS Variables ------------------------------- */
 :root {
-  --dark: #112c36;
-  --featured: lightblue;
-  --medium: rgb(70, 178, 236);
-  --light: #c8e8f4;
-  --v-light: #ebfafe;
+  --dark: #450008;
+  --featured: #d0d0d0;
+  --medium: #78000e;
+  --light: #ededed;
   --light-text: #fff;
-  --featured-text: lightblue;
+  --featured-text: #e2001a;
 }
 
 /* ---------------------- Typography Styles ----------------------------- */
@@ -55,6 +54,13 @@ p, li {
   font-weight: 200;
   font-size: 1rem;
 }
+
+li {
+  margin-bottom: 0.3rem;
+  margin-left: 1.5rem;
+}
+
+ul, ol { margin-bottom: 1rem;}
 
 h2:last-child, 
 h3:last-child, 
@@ -129,7 +135,7 @@ p a:hover {
 .bg-v-light  { background-color: var(--v-light); }
 
 .bg-image {
-    background-color: var(--light); /* Set a fall-back color while images are loading */ 
+    background-color: var(--featured); /* Set a fall-back color while images are loading */ 
     background-size: cover;
     background-position: center; 
     background-repeat: no-repeat;
@@ -189,7 +195,6 @@ nav a {
     padding: 0.25rem 0.5rem;
     display: inline-block;
     text-decoration: none;
-    text-transform: capitalize;
 }
 nav a:hover {
   color: var(--featured-text);
@@ -250,13 +255,13 @@ nav a:hover {
   
   /* Styles when the hamburger button is active  */
   .hamburger-button.active {
-    color: white;
+    color: var(--featured-text);
   }
   
   
   .mobile-menu {
     display: none; 
-    background-color: var(--featured);
+    background-color: var(--light);
     padding: 5%;
     position: fixed; 
     z-index:3;
@@ -269,7 +274,7 @@ nav a:hover {
   
   .mobile-menu a {
     text-decoration: none; 
-    color: inherit; 
+    color: black; 
     padding: 2%;
     display: block;
     font-weight: normal;
@@ -383,6 +388,7 @@ nav a:hover {
   display: inline-block;
   vertical-align: top;
 }
+.block { display: block;}
 
 /* ------------------ MD Media Query (64em / 1024px) --------------- */ 
 /* - Styles added here will apply at devices smaller than 576px, or zoomed in equivalent */ 

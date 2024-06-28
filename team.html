@@ -50,21 +50,22 @@ team:
 </section>
 
 <!-- team -->
-<section class="padded">
+<section class="padded grid">
   {% for person in page.team %}
 
-    <div class="col-5_sm-12 padded-2"> 
-      <img src="{{person.profil_image}}" alt="{{person.name}}" class="profile-image">
-    </div>
-    <h3>{{person.name}}</h3>
-    <p>{{person.beschreibung}}</p>
+    <div class="col-4_md-6_sm-12 padded-2"> 
+      <div class="portrait bg-image" style="background-image: url('{{person.profil_image}}')"></div>
+    
+      <h3 class="padded-t">{{person.name}}</h3>
+      <p>{{person.beschreibung}}</p>
 
-    <a href="tel:{{person.nummer}}">
-      <i class="fa-solid fa-phone"></i>
-    </a>
-    <a href="mailto:{{person.email}}">
-      <i class="fa-regular fa-envelope"></i>
-    </a>
+      <a href="tel:{{person.nummer}}">
+        <i class="fa-solid fa-phone"></i>
+      </a>
+      <a href="mailto:{{person.email}}">
+        <i class="fa-regular fa-envelope"></i>
+      </a>
+    </div>
 
   {% endfor %}
 </section>
