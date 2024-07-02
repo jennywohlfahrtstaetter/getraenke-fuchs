@@ -47,7 +47,7 @@ h4 { font-size: 1.6rem; }
 h5 { font-size: 1.4rem; }
 h6 { font-size: 1.2rem; }
 
-p, li {
+p, a, li {
   line-height: 1.4; 
   margin-bottom: 1rem;
   font-family: 'Martel', serif; 
@@ -88,8 +88,8 @@ p:last-child {
 
 /* flipped die reihenfolge im jekyll loop, nth child kann odd oder even sein, je nach dem bei welchem bild gestartet werden soll; row reverse dreht die reihe um; column reverse dreht die reihenfolge innerhalb einer reihe um -> oft gut für mobile responsive design */
 
-.flex-flip-alternate:nth-child(even) {
-  flex-direction: row-reverse;
+.flex-flip {
+  flex-direction: column-reverse;
 }
 
 /* ------------------------ Buttons & Links ------------------------ */
@@ -116,6 +116,7 @@ p a:hover {
     line-height: 1;
     padding: 0.5rem 1.5rem;
     border: 1px solid;
+    margin-top: 0.8rem;
 }
 
 .button:hover {
@@ -127,12 +128,7 @@ p a:hover {
   border-bottom: 1px solid;
 }
 
-/* suggested additional styles 
-- .button-inverted, .button-subtle, .button-lg  */
-
-
 /* ------------ Backgrounds & Background Images  ----------------------- */
-
 .bg-dark     { background-color: var(--dark);}
 .bg-featured { background-color: var(--featured);}
 .bg-medium   { background-color: var(--medium); }
@@ -173,7 +169,6 @@ p a:hover {
   background-color: rgba(0,0,0,0.5);
 }
 
-
 .bg-overlay > * {
   z-index: 2;
   position: relative;
@@ -189,9 +184,7 @@ p a:hover {
   opacity: 0.5;
 }
 
-
-
-/* ------------------ Header ---------------------- */
+/* ------------------ Header and Footer ---------------------- */
 header {
     padding: 1rem 5%;
 }
@@ -210,9 +203,9 @@ nav a:hover {
   font-size: 2.5rem;
 } 
 
+footer a { border: none; text-decoration: none;}
 
 /* Dropdown styles */
-
 .dropdown { 
   position: relative; 
   display: inline-block;
@@ -262,7 +255,6 @@ nav a:hover {
   .hamburger-button.active {
     color: var(--featured-text);
   }
-  
   
   .mobile-menu {
     display: none; 
@@ -338,7 +330,13 @@ form button:hover {
 
 /* -------------------- Page Name  ------------------------------------- */
 
-
+/* boxen auf link-seiten */
+.box {
+  border: 1px solid;
+  padding: 5rem;
+  margin: 1rem;
+  background-color: var(--featured);
+}
 
 
 
@@ -391,6 +389,8 @@ form button:hover {
 .padded-b-0 { padding-bottom: 0; }
 .padded-l-0 { padding-left: 0; }
 .padded-r-0 { padding-right: 0; }
+
+.img-padding {padding-top: 7rem;}
 
 /* Margin Utility Classes */ 
 
@@ -447,6 +447,11 @@ form button:hover {
 	.md-show { display: block; }
 	.md-hide { display: none;  }
 
+  .md-padded-t {padding-top: 4rem;}
+  .md-center {text-align: center;}
+
+  .md-padded-0 {padding-top: 0;}
+  .padded {padding: 6%;}
 }
 
 /* ------------------- SM Media Query (48em / 768px) --------------- */ 
@@ -470,6 +475,8 @@ form button:hover {
   .sm-padded-b-0 { padding-bottom: 0; }
   .sm-margin-t-0 { margin-top: 0; }
   .sm-margin-b-0 { margin-bottom: 0; }
+
+  .sm-margin-t { margin-top: 2rem;}
 
   .sm-landscape     { padding-bottom: 66% ; }
   .sm-portrait-tall { padding-bottom: 175%; }
