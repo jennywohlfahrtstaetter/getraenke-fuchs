@@ -1,6 +1,7 @@
 ---
 layout: default
 title: Homepage
+homepage_image: /images/empfang.jpg
 seo:
   title: 
   description:
@@ -10,15 +11,26 @@ seo:
   hide-from-google: false
 ---
 <!-- firmenbanner -->
-<section class="bg-image vh70">
-
+<section class="grid bg-image vh70" style="background-image: url('{{ page.homepage_image }}')">
+  <div class=" col-5-bottom bg-light center homepage-box vh40 padded sm-hide">
+    <h2 class="uppercase">Kaspar Fuchs</h2>
+    <p>Getränkefachhandel · Kaffeeimport · Rösterei </p>
+  </div>
 </section>
 
 <!-- Öffnungszeiten Banner -->
 {% include oeffnungszeiten-banner.html %}
 
+<!-- kurzes über uns -->
+<section class="padded md-padded-lg">
+  <h2>Getränkefachhandel & Kaffeerösterei</h2>
+  <p>Wir sind ein regionaler Getränkefachgroßhandel und betreuen unsere Kunden vorwiegend aus der Gastronomie und Hotellerie sowie Vereine und Festveranstaltungen.</p>
+  <p>Besonders stolz sind wir auf den in unserer eigenen Rösterei verarbeiteten Fuchs Kaffee, der noch traditionell im Trommelröstverfahren schonend geröstet wird.</p>
+  <a href="/ueber-uns.html" class="button">Weitere Informationen</a>
+</section>
+
  <!-- kontakt -->
- <section class="padded md-padded-lg">
+ <section class="padded padded-t-0">
   <h2>Kontakt</h2>
   <p>Nehmen Sie gerne mit uns Kontakt auf:
     <a href="mailto:info@getraenke-fuchs.at">info@getraenke-fuchs.at</a>
@@ -32,11 +44,3 @@ seo:
  </section>
 
 <!-- sortiment = löschen -->
-
-<!-- kurzes über uns -->
-<section class="padded">
-  <h2>Getränkefachhandel & Kaffeerösterei</h2>
-  <p>Wir sind ein regionaler Getränkefachgroßhandel und betreuen unsere Kunden vorwiegend aus der Gastronomie und Hotellerie sowie Vereine und Festveranstaltungen.</p>
-  <p>Besonders stolz sind wir auf den in unserer eigenen Rösterei verarbeiteten Fuchs Kaffee, der noch traditionell im Trommelröstverfahren schonend geröstet wird.</p>
-  <a href="/ueber-uns.html" class="button">Weitere Informationen</a>
-</section>
